@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+	<meta charset="UTF-8">
+	<title>Document 4.1</title>
+	<style type="text/css">
+		* {
+			box-sizing: border-box;
+		}
+		html {
+			display: block;
+			box-sizing: border-box;
+			width:1920px;
+		}
+		head {
+			display: none;
+		}
+
+		body {
+			font-family: roboto, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            font-style: normal;
+            min-width: 1920px;
+            display: block;
+            margin: 0;
+            padding: 0;
+            color:#fff;
+		}
+		ul li {
+			list-style: none;
+		}
+		.container {
+			margin-top: 0;
+		}
+		.topblock {
+			background-image:url("images/header-backgroudn.jpg");
+			background-repeat: repeat-x, repeat-y;
+			background-position: center top;
+			background-size: cover;
+			min-height: 700px;
+			display: block;
+			align-items: center;
+			z-index: 99;
+			position: relative;
+			font:initial;
+			margin: 0;
+			padding: 0;
+		}
+		.header {
+			position: fixed;
+			width: 1920px;
+			z-index: 100;
+			display: block;
+			box-sizing: border-box;
+			background: inherit;
+			text-align: center;
+		}
+		.header-content {
+			min-width: 1168px;
+			display: inline-block;
+			box-sizing: border-box;
+			border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+			padding: 40px 0;
+			margin: 0 auto;
+			z-index: 101;
+			color: white;
+			position: relative;
+			vertical-align:top;
+		}
+		#up {
+			display: inline-block;
+			width: 100%
+			vertical-align:top;
+			box-sizing: border-box;
+		}
+		.logo {
+			left: 10px;
+			position: absolute;
+			line-height: 20px;
+			bottom: 15px;
+		}
+		.menu {
+			position: absolute;
+			right: 100px;
+			line-height: 20px;
+			right: 10px;
+			bottom: 10px;
+		}
+		.menu-button li {
+			display: inline-block;
+			color:rgba(0, 0, 0, 0);
+			padding-left: 60px;
+			/*z-index: 120;*/
+			text-decoration: none;
+		}
+		.button {
+			color: white;
+			text-decoration: none;
+		}
+		.container {
+			margin-top: 0;
+		}
+
+		ul li {
+			list-style: none;
+		}
+		.photo {
+			padding: 0;
+			display: block;
+			box-sizing: border-box;
+		}
+		.photo1 {
+			min-width: 1920px;
+		}
+		.first {
+			position: relative;
+			width: 1168px;
+			min-height: 350px;
+			margin: 0 auto;
+			padding-top: 10%;
+			display: block;
+		}
+		h1 {
+			font-size: 60px;
+			font-weight: 700;
+			text-transform: uppercase;
+			text-align: center;
+			margin: 5px;
+			color: #fff;
+			margin-top: 20px;
+			margin-bottom: 10px;
+		}
+		h3 {
+			text-align: center;
+		}
+		.first p {
+			color: #fff;
+			font-size: 22px;
+			font-weight: 300;
+			line-height: 1.5;
+			margin-bottom: 80px;
+			margin: 0 0 10px;
+			text-align: center;
+		}
+		.btn-red {
+			display: block;
+			background-color: red;
+			color: white;
+			text-align: center;
+			vertical-align: middle;
+			font-weight: 600;
+			width: 150px;
+			height: 45px;
+			border-radius: 2px;
+			border: 1px solid red;
+			position: relative;
+			margin: 50px auto;
+		}
+		.middle {
+			display: block;
+			width: 1168px;
+			min-height: 700px;
+			box-sizing: border-box;-box;
+			position: relative;
+			margin: auto;
+			margin-top: 100px;
+			line-height: 20px;
+		}
+		.row1, .row2 {
+			display: inline-block;
+			vertical-align: top;
+			min-height: 340px;
+			box-sizing: content-box;
+		}
+		.parts {
+			display: inline-block;
+			vertical-align: top;
+			width: 31%;
+			text-align: center;
+			box-sizing: border-box;
+		} 
+		.parts p {
+			text-align: center;
+			box-sizing: border-box;
+			color: rgb(108, 114,121);
+		}
+		.parts h3 {
+			text-align: center;
+			box-sizing: border-box;
+			color: rgb(45, 50, 50);
+		}
+		.footer-row {
+			color: rgb(110, 115, 120);
+			background: rgb(58, 62, 100);
+			display: block;
+			text-align: center;
+		}
+		.footer-points {
+			display: inline-block;
+			vertical-align: top;
+			text-align: center;
+			box-sizing: border-box;
+			width: 300px;
+			margin-left: 50px;
+			margin-right: 50px;
+		}
+		.footer-points h5 {
+			text-align: center;
+			box-sizing: border-box;
+			color: rgb(255, 255, 255);
+		}
+		.footer-share {
+			padding-left: 0;
+		}
+		.footer-share li  {
+			box-sizing: border-box;
+			display: inline-block;
+			color:rgba(0, 0, 0, 0);
+			text-decoration: none;
+			text-align: center;
+			margin: auto;
+		}
+		.footer-bottom {
+			display: block;
+			position: relative;
+			width: 100%;
+			height: 100px;
+			text-align: center;
+			background: #313454;
+			color: rgba(0, 0, 0, 0);
+			margin-top: -14px;
+		}
+		.made {
+			display: block;
+			position: relative;
+			color: rgb(110, 115, 120);
+			top: 30px;
+		}
+		.made a {
+			color: #fff;
+			text-decoration: none;
+		}
+
+
+
+	</style>
+  </head>
+    <body>
+    	<section class="topblock">
+    		 <header class="header">
+    			<div class="header-content">
+    				<a id="up" class="logo" href="#"><img src="images/logo.png"></a>
+    				<nav id="up" class="menu">
+    					<ul class="menu-button">
+    						<li><a class="button" href="">Features</a></li>
+    						<li><a class="button" href="">Works</a></li>
+    						<li><a class="button" href="">Our Team</a></li>
+    						<li><a class="button" href="">Testimonials</a></li>
+    						<li><a class="button" href="">Download</a></li>
+    					</ul>
+    				</nav>
+    			</div>
+    		 </header>
+    		 <div class="container">
+    		 	<section class="first">
+    		 		<h1>You favorite one page<br>
+    		 		Multi purpose tamplate</h1>
+    		 		<p class=lorem1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna<br> vel scelerisque nisl consectetur et.</p>
+    		 		<button class="btn-red">FIND OUT MORE</button>
+    		 	</section>
+    		 </div>
+    	</section>
+    	<section class="middle">
+    		<div class="row1">
+    			<div class="parts">
+    				<img src="images/icon1.png" alt="pic">
+    				<h3>Easili customized</h3>
+    				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.</p>
+    			</div>
+    			<div class="parts">
+    				<img src="images/icon1.png" alt="pic">
+    				<h3>Easili customized</h3>
+    				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.</p>
+    			</div>
+    			<div class="parts">
+    				<img src="images/icon1.png" alt="pic">
+    				<h3>Easili customized</h3>
+    				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.</p>
+    			</div>
+    		</div>
+    		<div class="row2">
+    			<div class="parts">
+    				<img src="images/icon1.png" alt="pic">
+    				<h3>Easili customized</h3>
+    				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.</p>
+    			</div>
+    			<div class="parts">
+    				<img src="images/icon1.png" alt="pic">
+    				<h3>Easili customized</h3>
+    				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.</p>
+    			</div>
+    			<div class="parts">
+    				<img src="images/icon1.png" alt="pic">
+    				<h3>Easili customized</h3>
+    				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.</p>
+    			</div>
+    		</div>    		    		
+		</section>
+        <section class="photo">
+    	  <table class="photo1">
+    	  	<tbody>
+    	  		<tr>
+    	  			<td><img src="images/photo1.jpg" width="100%" alt=""></td>
+    	  			<td><img src="images/photo1.jpg" width="100%" alt=""></td>
+    	  			<td><img src="images/photo1.jpg" width="100%" alt=""></td>
+    	  			<td><img src="images/photo1.jpg" width="100%" alt=""></td>
+    	  		</tr>
+    	  		<tr>
+    	  			<td><img src="images/photo1.jpg" width="100%" alt=""></td>
+    	  			<td><img src="images/photo1.jpg" width="100%" alt=""></td>
+    	  			<td><img src="images/photo1.jpg" width="100%" alt=""></td>
+    	  			<td><img src="images/photo1.jpg" width="100%" alt=""></td>
+    	  		</tr>
+    	  	</tbody>
+    	  </table>
+        </section>
+    	<footer class="footer">
+          <div class="footer-top">
+                <div class="footer-row">
+                    <div class="footer-points">
+                        <h5>Location</h5>
+                        <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
+                    </div>
+                    <div class="footer-points">
+                        <h5>Share with Love</h5>
+                        <ul class="footer-share">
+                            <li><a href="#"><img src="images/icon23.png"></a></li>
+                            <li><a href="#"><img src="images/icon23.png"></a></li>
+                            <li><a href="#"><img src="images/icon23.png"></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-points">
+                        <h5>About ActiveBox</h5>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                    </div>
+                </div><!-- footer top -->
+          <div class="footer-bottom">
+          	<p class="made">Copyright © 2015 ActiveBox. All Rights Reserved<br>Made with by <a href="#">Igor Kuleev</a></p>
+          </div>
+        </footer><!-- footer -->
+    </body>
+</html>

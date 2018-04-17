@@ -1,0 +1,32 @@
+.task1 ul.calendar-days li:nth-child(7n+6) {
+	background-color: #ea0404;
+}
+.task1 ul.calendar-days li:nth-child(7n+7) {
+	background-color: #ea0404;
+}
+div.task2 div.block:nth-last-child(-n+7) {
+	display: none;
+}
+.customed-list li:first-child {
+	margin-top: 0px;
+}
+.customed-list li:last-child {
+	margin-bottom: 0px;
+}
+.customed-list li {
+ list-style-type: none;
+ margin: 20px;
+}
+.customed-list li:nth-child(2n):before {
+ content: "@"; 
+}
+.customed-list li:nth-child(2n+1):before {
+ content: "#";}
+
+.extra-task li:nth-last-child(4):first-child, li:nth-last-child(4):first-child ~ li {
+	margin: 30px;
+}
+.extra-task li:nth-last-of-type(n+5), .extra-task li:nth-last-of-type(n+5) ~ li {
+	margin: 10px;
+}
+
